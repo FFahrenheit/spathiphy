@@ -1,0 +1,10 @@
+body{
+    font-family: 'Oxygen', sans-serif;
+}
+
+.spin-load {
+    height: 5rem;
+    width: 5rem;
+    font-size: 200%;
+    color: green;
+}
