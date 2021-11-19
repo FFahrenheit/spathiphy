@@ -39,18 +39,10 @@
             setTimeout(() => {
                 if (logged == 'false') {
                     console.log('To login');
-                    if(window.location.href.includes('spathiphy')){
-                        window.location.href = 'spathiphy/login.html'
-                    }else{
-                        window.location.href = 'login.html'
-                    }
+                    window.location.assign('login.html');
                 } else {
-                    console.log('To dashboard')
-                    if(window.location.href.includes('spathiphy')){
-                        window.location.href = 'spathiphy/dashboard.html'
-                    }else{
-                        window.location.href = 'dashboard.html'
-                    }
+                    console.log('To dashboard');
+                    window.location.assign('dashboard.html');
                 }
             }, 1200);
 

@@ -3,6 +3,6 @@ window.onload = () => {
 
     if (logged == 'false') {
         console.log('Return to login');
-        window.location.href = 'login.html'
+        window.location.assing('login.html');
     }
 }
