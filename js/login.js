@@ -12,5 +12,20 @@ loginForm.addEventListener('submit', e => {
         password: form.password.value
     }
     console.log(data);
+
+    fetch(base_url + '/login',
+    {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json',
+            'Content-Type': 'application/json'
+        },
+        body: data
+    }).then(resp => {
+        console.log(resp);
+    }).catch(error => {
+        console.log(error);
+        alertar('No se pudo iniciar sesión', 'danger');
+    });
 });
 
