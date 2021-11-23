@@ -13,7 +13,11 @@
 }
 
 .btn-login:hover{
-    background-color: rgb(50, 138, 50);
+    background-color: rgb(23, 68, 23);
+}
+
+.btn-login:active{
+    background-color: rgb(23, 68, 23);
 }
 
 .input-login{
@@ -29,4 +33,13 @@
     background-color: rgba(0, 0, 0, 0.6);
     border-color: rgb(12, 59, 20);
     color: white;
+}
+
+.login-navigate{
+    font-size: 120%;
+}
+
+.login-navigate a{
+    color: white;
+    font-weight: bolder;
 }
