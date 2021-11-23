@@ -13,3 +13,7 @@ const base_url = 'http://142.93.117.12/api';
         window.location.assign('login.html');
     }
 })();
+
+function logout(){
+    console.log('To be implemented!');
+}

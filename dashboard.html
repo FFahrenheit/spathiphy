@@ -22,101 +22,146 @@
 </head>
 
 <body>
-    <div class="w-100 container-fluid">
-        <div class="row bg-dark py-3 header">
-            <div class="col-md-4 text-light">
-                <span class="align-middle">
-                    <i class="fas fa-bars toggle-icon align-middle mx-3" onclick="toggleSidebar()" title="Mostrar / ocultar menú"></i>
-                </span>
-            </div>
-            <div class="col-md-4 text-center text-light">
-                <a href="dashboard.html" class="no-decoration align-middle" title="Ir a inicio">
-                    <span class="align-middle contact-email">
-                        <i class="fas fa-seedling mx-3"></i>
-                        Spatiphy
+    <div class="full-width-div">
+        <div class="w-100 container-fluid">
+            <div class="row bg-dark py-3 header">
+                <div class="col-md-4 text-light">
+                    <span class="align-middle">
+                        <i class="fas fa-bars toggle-icon align-middle mx-3" onclick="toggleSidebar()"
+                            title="Mostrar / ocultar menú"></i>
                     </span>
-                </a>
+                </div>
+                <div class="col-md-4 text-center text-light">
+                    <a href="dashboard.html" class="no-decoration align-middle" title="Ir a inicio">
+                        <span class="align-middle contact-email">
+                            <i class="fas fa-seedling mx-3"></i>
+                            Spatiphy
+                        </span>
+                    </a>
+                </div>
+                <div class="col-md-4 text-center">
+                    <span class="logout text-light align-middle" onclick="logout()">
+                        Cerrar sesión
+                    </span>
+                </div>
             </div>
-            <div class="col-md-4 text-center">
-                <span class="logout text-light align-middle" onclick="logout()">
-                    Cerrar sesión
-                </span>
-            </div>
-        </div>
 
-        <div class="sidebar">
-            <div class="container-fluid">
-                <div id="wrapper">
+            <div class="sidebar">
+                <div class="container-fluid">
+                    <div id="wrapper">
 
-                    <!-- Sidebar -->
-                    <div id="sidebar-wrapper">
-                        <ul class="sidebar-nav">
-                            <li class="sidebar-brand">
-                                <a href="dashboard.html">
-                                    Control de plantas
-                                </a>
-                            </li>
-                            <li class="active">
-                                <a href="dashboard.html">Mis plantas</a>
-                            </li>
-                            <li>
-                                <a href="dashboard.html">Registrar plantas</a>
-                            </li>
-                        </ul>
-                    </div>
-                    <!-- /#sidebar-wrapper -->
+                        <div id="sidebar-wrapper">
+                            <ul class="sidebar-nav">
+                                <li class="sidebar-brand">
+                                    <a href="dashboard.html">
+                                        Control de plantas
+                                    </a>
+                                </li>
+                                <li class="active">
+                                    <a href="dashboard.html">Mis plantas</a>
+                                </li>
+                                <li>
+                                    <a href="dashboard.html">Registrar plantas</a>
+                                </li>
+                            </ul>
+                        </div>
 
-                    <!-- Page Content -->
-                    <div id="page-content-wrapper">
-                        <div class="container-fluid">
-                            <div class="row">
-                                <div class="col-lg-12">
+                        <div>
+                            <div class="container-fluid">
+                                <div class="row">
+                                    <div class="col-lg-12 col-md-12">
 
-                                    <button onclick="toggleSidebar()">
-                                        Click!
-                                    </button>
-                                    Holaaa
+                                        <button onclick="toggleSidebar()">
+                                            Click!
+                                        </button>
+                                        Holaaa
+
+                                        <div class="card-columns">
+                                            <div class="card">
+                                              <img class="card-img-top" src="..." alt="Card image cap">
+                                              <div class="card-body">
+                                                <h5 class="card-title">Card title that wraps to a new line</h5>
+                                                <p class="card-text">This is a longer card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                                              </div>
+                                            </div>
+                                            <div class="card p-3">
+                                              <blockquote class="blockquote mb-0 card-body">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                <footer class="blockquote-footer">
+                                                  <small class="text-muted">
+                                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                                  </small>
+                                                </footer>
+                                              </blockquote>
+                                            </div>
+                                            <div class="card">
+                                              <img class="card-img-top" src="..." alt="Card image cap">
+                                              <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                              </div>
+                                            </div>
+                                            <div class="card bg-primary text-white text-center p-3">
+                                              <blockquote class="blockquote mb-0">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+                                                <footer class="blockquote-footer">
+                                                  <small>
+                                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                                  </small>
+                                                </footer>
+                                              </blockquote>
+                                            </div>
+                                            <div class="card text-center">
+                                              <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This card has supporting text below as a natural lead-in to additional content.</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                              </div>
+                                            </div>
+                                            <div class="card">
+                                              <img class="card-img" src="..." alt="Card image">
+                                            </div>
+                                            <div class="card p-3 text-right">
+                                              <blockquote class="blockquote mb-0">
+                                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+                                                <footer class="blockquote-footer">
+                                                  <small class="text-muted">
+                                                    Someone famous in <cite title="Source Title">Source Title</cite>
+                                                  </small>
+                                                </footer>
+                                              </blockquote>
+                                            </div>
+                                            <div class="card">
+                                              <div class="card-body">
+                                                <h5 class="card-title">Card title</h5>
+                                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This card has even longer content than the first to show that equal height action.</p>
+                                                <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
+                                              </div>
+                                            </div>
+                                          </div>
+                                    </div>
                                 </div>
                             </div>
+
                         </div>
-                        <!-- /#page-content-wrapper -->
-
                     </div>
-                    <!-- /#wrapper -->
+
+                    <div style="height: 20px;"></div>
+                    <footer class="footer page-footer bg-dark">
+                        <div class="container text-center">
+                            <span class="text-light">
+                                © COPYRIGHT 2021. TODOS LOS DERECHOS RESERVADOS.
+                            </span>
+                        </div>
+                    </footer>
                 </div>
 
-                <div style="height: 20px;"></div>
-                <footer class="footer page-footer bg-dark">
-                    <div class="container text-center">
-                        <span class="text-light">
-                            © COPYRIGHT 2021. TODOS LOS DERECHOS RESERVADOS.
-                        </span>
-                    </div>
-                </footer>
-            </div>
-
-        </div>
-    </div>
-    <div class="modal fade" id="confirmationModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
-        aria-hidden="true">
-        <div class="modal-dialog sa_modal bg-dark" role="document">
-            <div class="modal-content bg-dark">
-                <div class="modal-header bg-dark">
-                    <h5 class="modal-title bg-dark text-light" id="confirmationModalLabel"></h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body bg-dark">
-                    <p id="confirmationModalBody" class="text-light"></p>
-                </div>
-                <div class="modal-footer bg-dark">
-                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
-                    <button type="button" class="btn btn-warning" onclick="proceed()">Confirmar</button>
-                </div>
             </div>
         </div>
     </div>
+
+
     <script src="https://code.jquery.com/jquery-3.3.1.js" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.js"
         crossorigin="anonymous"></script>
@@ -124,7 +169,6 @@
     <script src="js/alert.js"></script>
     <!-- <script src="js/auth.js"></script> -->
     <script src="js/dashboard.js"></script>
-</body>
 </body>
 
 </html>
