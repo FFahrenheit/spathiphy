@@ -28,6 +28,12 @@ const planta = {
     }
 })();
 
+form.addEventListener('submit', (e)=> {
+    e.preventDefault();
+
+    console.log('Saving...');
+})
+
 
 function loadInfo(){
     console.log({id});
