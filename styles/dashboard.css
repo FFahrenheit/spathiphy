@@ -236,3 +236,8 @@ html, body {
     left: 0 !important;
     right: -100px !important;
 } */
+
+.plant{
+    width: 100%;
+    height: auto;
+}

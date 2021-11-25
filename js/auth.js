@@ -2,8 +2,8 @@ const base_url = 'http://142.93.117.12/api';
 
 (() => {
     const logged = localStorage.getItem('logged') || 'false';
-    
-    console.log({logged});
+
+    console.log({ logged });
 
     // showModal('hola', 'hola');
     // alertar('ok','success');
@@ -14,6 +14,6 @@ const base_url = 'http://142.93.117.12/api';
     }
 })();
 
-function logout(){
+function logout() {
     console.log('To be implemented!');
 }

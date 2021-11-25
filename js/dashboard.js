@@ -1,3 +1,3 @@
-function toggleSidebar(){
+function toggleSidebar() {
     $("#wrapper").toggleClass("toggled");
 }
