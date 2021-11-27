@@ -15,5 +15,7 @@ const base_url = 'http://142.93.117.12/api';
 })();
 
 function logout() {
-    console.log('To be implemented!');
+    localStorage.removeItem('token');
+    localStorage.removeItem('logged');
+    window.location.assign('login.html');
 }

@@ -7,23 +7,38 @@ const form = {
 
 loginForm.addEventListener('submit', e => {
     e.preventDefault();
+
     const data = {
         username: form.username.value,
         password: form.password.value
     }
-    console.log(data);
 
-    fetch(base_url + '/login',
+    const body = JSON.stringify(data);
+
+    console.log({body});
+
+    fetch(base_url + '/auth',
     {
         method: 'POST',
         headers: {
             'Accept': 'application/json',
             'Content-Type': 'application/json'
         },
-        body: data
-    }).then(resp => {
+        body: body
+    })
+    .then(r => r.json())
+    .then(resp => {
         console.log(resp);
-    }).catch(error => {
+        if(resp['token']){
+            localStorage.setItem('token', resp['token']);
+            localStorage.setItem('logged', 'true');
+
+            window.location.assign('dashboard.html');
+        }else{
+            alertar('No se pudo iniciar sesión', 'danger');
+        }
+    })
+    .catch(error => {
         console.log(error);
         alertar('No se pudo iniciar sesión', 'danger');
     });

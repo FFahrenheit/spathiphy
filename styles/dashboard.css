@@ -241,3 +241,16 @@ html, body {
     width: 100%;
     height: auto;
 }
+
+.temperatura{
+    color: rgb(153, 0, 0);
+}
+
+.humedad{
+    color: rgb(0, 85, 255);
+}
+
+.luminosidad{
+    color: rgb(209, 209, 0);
+}
+

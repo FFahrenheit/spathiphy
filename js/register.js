@@ -9,6 +9,7 @@ const form = {
 
 registerForm.addEventListener('submit', e => {
     e.preventDefault();
+
     const data = {
         username: form.username.value,
         password: form.password.value,
@@ -17,20 +18,29 @@ registerForm.addEventListener('submit', e => {
     };
 
     console.log(data);
+    const body = JSON.stringify(data);
 
-    fetch(base_url + '/auth',
-    {
-        method: 'POST',
-        headers: {
-            'Accept': 'application/json',
-            'Content-Type': 'application/json',            
-        },
-        body: data
-    }).then(resp => {
-        console.log(resp);
-    }).catch(error => {
-        console.log(error);
-        alertar('No se pudo registrar al usuario', 'danger');
-    });
+    fetch(base_url + '/usuario',
+        {
+            method: 'POST',
+            headers: {
+                'Accept': 'application/json',
+                'Content-Type': 'application/json',
+            },
+            body: body
+        })
+        .then(r => r.json())
+        .then(resp => {
+            console.log(resp);
+            if (resp['acknowledged']) {
+                alertar('Usuario registrado', 'success');
+            } else {
+                alertar('No se pudo registrar al usuario', 'danger');
+            }
+        })
+        .catch(error => {
+            console.log(error);
+            alertar('No se pudo registrar al usuario', 'danger');
+        });
 });
 
