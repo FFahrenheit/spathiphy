@@ -1,5 +1,6 @@
 let id;
 let set = false;
+let lastRec = 0;
 
 const form = document.getElementById('form');
 
@@ -88,7 +89,6 @@ function loadInfo(){
     })
     .then(r => r.json())
     .then(resp => {
-        console.log(resp);
         const last = resp['last_rec'];
 
         planta.nombre.innerHTML = 'Planta #' + resp['id_micro'];
@@ -106,6 +106,22 @@ function loadInfo(){
             planta.max_hum.value = resp['max_hum'];
             planta.min_hum.value = resp['min_hum'];
             set = true;
+            lastRec = resp['last_rec']['recTime'];
+            console.info({ 
+                lastRec
+             });
+
+            loadHistoric(resp['_id']);
+            setLongPolling(resp['last_rec']);
+            lastRec = resp['last_rec']['recTime'];
+        }else if(lastRec != resp['last_rec']['recTime']){
+            appendLongPolling(resp['last_rec']);
+            console.info({ 
+                lastRec,
+                newLastRect: last['recTime']
+             });
+            lastRec = last['recTime'];
+
         }
 
     })
