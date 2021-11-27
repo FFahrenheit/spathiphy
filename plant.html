@@ -64,11 +64,16 @@
                             </div>
                             <div>
                                 <div class="container-fluid">
+                                    <br>
+                                    <div class="alert alert-dismissible" style="text-align:center;" id="alert">
+                                        <span id="alert-message"></span>
+                                        <a href="#" class="close" onclick="$('#alert').hide();">&times;</a>
+                                    </div>
                                     <div class="row py-3">
                                         <div class="col-md-4">
                                             <div class="card p-3">
                                                 <div class="card-content">
-                                                    <h4 class="text-center card-title font-weight-bold">Planta</h4>
+                                                    <h4 class="text-center card-title font-weight-bold" id="nombre">Planta</h4>
                                                     <div class="text-center">
                                                         <img class="card-img-top plant-icon py-1" src="assets/images/plant.png" alt="Mi plantita">
                                                         <br>
@@ -86,7 +91,7 @@
                                                     <h6 class="card-text plant-stat">
                                                         <i class="fas fa-thermometer-three-quarters mr-1"></i>
                                                         Temperatura:
-                                                        <span id="Temperatura"> 10</span>
+                                                        <span id="temperatura"> 10</span>
                                                     </h6>
                                                     <h6 class="card-text plant-stat">
                                                         <i class="fas fa-sun mr-1"></i>
@@ -100,43 +105,79 @@
                                                     <form id="form" class="text-center">
                                                         <div class="form-group">
                                                             <label for="titulo">Temperatura máxima</label>
-                                                            <input
-                                                                type="number"
-                                                                class="form-control"
-                                                                id="max_temp"
-                                                                placeholder="Máxima temperatura"
-                                                                required
-                                                            >
+                                                            <div class="input-group">
+                                                                <input
+                                                                    type="number"
+                                                                    min="0"
+                                                                    max="65"
+                                                                    class="form-control"
+                                                                    id="max_temp"
+                                                                    placeholder="Máxima temperatura"
+                                                                    required
+                                                                >
+                                                                <div class="input-group-prepend">
+                                                                    <div class="input-group-text">
+                                                                        °C
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="titulo">Temperatura mínima</label>
-                                                            <input
-                                                                type="number"
-                                                                class="form-control"
-                                                                id="min_temp"
-                                                                placeholder="Mínima temperatura"
-                                                                required
-                                                            >
+                                                            <div class="input-group">
+                                                                <input
+                                                                    type="number"
+                                                                    min="-10"
+                                                                    max="50"
+                                                                    class="form-control"
+                                                                    id="min_temp"
+                                                                    placeholder="Mínima temperatura"
+                                                                    required
+                                                                >
+                                                                <div class="input-group-prepend">
+                                                                    <div class="input-group-text">
+                                                                        °C
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="titulo">Humedad máxima</label>
-                                                            <input
-                                                                type="number"
-                                                                class="form-control"
-                                                                id="max_hum"
-                                                                placeholder="Máxima humedad"
-                                                                required
-                                                            >
+                                                            <div class="input-group">
+                                                                <input
+                                                                    type="number"
+                                                                    min="40"
+                                                                    max="100"
+                                                                    class="form-control"
+                                                                    id="max_hum"
+                                                                    placeholder="Máxima humedad"
+                                                                    required
+                                                                >
+                                                                <div class="input-group-prepend">
+                                                                    <div class="input-group-text">
+                                                                        %
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="form-group">
                                                             <label for="titulo">Humedad mínima</label>
-                                                            <input
-                                                                type="number"
-                                                                class="form-control"
-                                                                id="min_hum"
-                                                                placeholder="Mínima humedad"
-                                                                required
-                                                            >
+                                                            <div class="input-group">
+                                                                <input
+                                                                    type="number"
+                                                                    min="0"
+                                                                    max="90"
+                                                                    class="form-control"
+                                                                    id="min_hum"
+                                                                    placeholder="Mínima humedad"
+                                                                    required
+                                                                >
+                                                                <div class="input-group-prepend">
+                                                                    <div class="input-group-text">
+                                                                        %
+                                                                    </div>
+                                                                </div>
+                                                            </div>
                                                         </div>
                                                         <div class="text-center">
                                                             <button type="submit" class="px-3 btn btn-success">
