@@ -25,6 +25,7 @@ const planta = {
     }else{
         const urlParams = new URLSearchParams(queryString);
         id = urlParams.get('id');
+        loadInfo();
         setInterval(loadInfo, 2000);
     }
 })();
@@ -33,6 +34,15 @@ const planta = {
 form.addEventListener('submit', (e)=> {
     e.preventDefault();
     console.log('Saving...');
+
+    if(Number(planta.max_temp.value) < Number(planta.min_temp.value)){
+        alertar('La temperatura máxima no puede ser menor que la mínima', 'danger');
+        return;
+    }
+    if(Number(planta.max_hum.value) < Number(planta.min_hum.value)){
+        alertar('La humedad máxima no puede ser menor que la mínima', 'danger');
+        return;
+    }
 
     const xForm = 
     `max_temp=${planta.max_temp.value}\
@@ -82,10 +92,13 @@ function loadInfo(){
         const last = resp['last_rec'];
 
         planta.nombre.innerHTML = 'Planta #' + resp['id_micro'];
-        planta.ultima.innerHTML = new Date(last['recTime']);
-        planta.temperatura.innerHTML = last['temperatura'] + '°C';
-        planta.humedad.innerHTML = last['humedad'] + '%';
-        planta.luminosidad.innerHTML = last['luminosidad'] + ' lx';
+
+        if(last){
+            planta.ultima.innerHTML = new Date(last['recTime']);
+            planta.temperatura.innerHTML = last['temperatura'] + '°C';
+            planta.humedad.innerHTML = last['humedad'] + '%';
+            planta.luminosidad.innerHTML = last['luminosidad'] + ' lx';
+        }
 
         if(!set){
             planta.max_temp.value = resp['max_temp'];
@@ -97,6 +110,7 @@ function loadInfo(){
 
     })
     .catch(error=>{
+        console.error(error);
         alertar('Error al recibir información', 'danger');
     });
 }

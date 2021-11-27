@@ -2,6 +2,7 @@
 <html lang="es">
     <head>
         <meta charset="UTF-8">
+        <!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
         <link rel="shortcout icon" type="image/x-icon" href="assets/icon.png">
         <meta name="viewport" content="width=device-width, initial-scale=1,
             shrink-to-fit=no">
@@ -64,35 +65,21 @@
                             </div>
                             <div>
                                 <div class="container-fluid">
+                                    <br>
                                     <div class="alert alert-dismissible py-3" style="text-align:center;" id="alert">
                                         <span id="alert-message"></span>
                                         <a href="#" class="close" onclick="$('#alert').hide();">&times;</a>
                                     </div>
-                                    <div class="row py-3">
+                                    <div class="row pb-3">
                                         <div class="col-md-3">
                                             &nbsp;
                                         </div>
                                         <div class="col-md-6">
                                             <form id="form">
                                                 <h4 class="card-title font-weight-bold pt-3">
+                                                    <i class="fab fa-pagelines mr-2"></i>
                                                     Nueva planta
                                                 </h4>
-                                                
-                                                <h5 class="card-title mt-3 font-weight-bold text-center">
-                                                    <i class="fab fa-pagelines mr-2"></i>
-                                                    Detalles
-                                                </h5>
-
-                                                <div class="form-group">
-                                                    <label for="titulo">Especie</label>
-                                                    <input
-                                                        type="text"
-                                                        class="form-control"
-                                                        id="especie"
-                                                        placeholder="Especie de la planta"
-                                                        required
-                                                    >
-                                                </div>
 
                                                 <h5 class="card-title mt-3 font-weight-bold text-center">
                                                     <i class="fas fa-microchip mr-2"></i>
